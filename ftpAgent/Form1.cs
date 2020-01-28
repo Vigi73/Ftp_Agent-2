@@ -103,7 +103,8 @@ namespace ftpAgent
                 //Проверка показать все или отдел...
                 if (chAll.Checked)
                 {
-                    if (node.Text.StartsWith(txtNumber.Text.Trim()) || node.Text.StartsWith("+" + txtNumber.Text.Trim()) || node.Text.StartsWith("+ " + txtNumber.Text.Trim()) || node.Text.StartsWith("Отдел №19") || node.Text.StartsWith("+Отдел №19") || node.Text.StartsWith("+ Отдел №19") || node.Text.StartsWith("+ Отдел 19") || node.Text.StartsWith("+ Отдел19") || node.Text.StartsWith("Отдел 19") || node.Text.StartsWith("Отдел19"))
+                    /*if (node.Text.StartsWith(txtNumber.Text.Trim()) || node.Text.StartsWith("+" + txtNumber.Text.Trim()) || node.Text.StartsWith("+ " + txtNumber.Text.Trim()) || node.Text.StartsWith("Отдел №19") || node.Text.StartsWith("+Отдел №19") || node.Text.StartsWith("+ Отдел №19") || node.Text.StartsWith("+ Отдел 19") || node.Text.StartsWith("+ Отдел19") || node.Text.StartsWith("Отдел 19") || node.Text.StartsWith("Отдел19"))*/
+                    if (node.Text.StartsWith(txtNumber.Text.Trim()) || node.Text.StartsWith("+" + txtNumber.Text.Trim()) || node.Text.StartsWith("+ " + txtNumber.Text.Trim()))
                     {
                         node.ForeColor = Color.Red;
                         node.NodeFont = new Font("Consolas", 9, FontStyle.Bold);
@@ -119,7 +120,8 @@ namespace ftpAgent
                 }
                 else
                 {
-                    if (node.Text.StartsWith(txtNumber.Text.Trim()) || node.Text.StartsWith("+" + txtNumber.Text.Trim()) || node.Text.StartsWith("+ " + txtNumber.Text.Trim()) || node.Text.StartsWith("Отдел №19") || node.Text.StartsWith("+Отдел №19") || node.Text.StartsWith("+ Отдел №19"))
+                    /*if (node.Text.StartsWith(txtNumber.Text.Trim()) || node.Text.StartsWith("+" + txtNumber.Text.Trim()) || node.Text.StartsWith("+ " + txtNumber.Text.Trim()) || node.Text.StartsWith("Отдел №19") || node.Text.StartsWith("+Отдел №19") || node.Text.StartsWith("+ Отдел №19"))*/
+                    if (node.Text.StartsWith(txtNumber.Text.Trim()) || node.Text.StartsWith("+" + txtNumber.Text.Trim()) || node.Text.StartsWith("+ " + txtNumber.Text.Trim()))
                     {
                         node.ForeColor = Color.Black;
                         node.NodeFont = new Font("Consolas", 9, FontStyle.Regular);
@@ -196,7 +198,9 @@ namespace ftpAgent
                     }
                 }
 
-                if (node.Text.StartsWith(txtNumber.Text.Trim()) || node.Text.StartsWith("+" + txtNumber.Text.Trim()) || node.Text.StartsWith("+ " + txtNumber.Text.Trim()) || node.Text.StartsWith("Отдел №19") || node.Text.StartsWith("+Отдел №19") || node.Text.StartsWith("+ Отдел №19") || node.Text.StartsWith("+ Отдел 19") || node.Text.StartsWith("+ Отдел19") || node.Text.StartsWith("Отдел 19") || node.Text.StartsWith("Отдел19"))
+                /*if (node.Text.StartsWith(txtNumber.Text.Trim()) || node.Text.StartsWith("+" + txtNumber.Text.Trim()) || node.Text.StartsWith("+ " + txtNumber.Text.Trim()) || node.Text.StartsWith("Отдел №19") || node.Text.StartsWith("+Отдел №19") || node.Text.StartsWith("+ Отдел №19") || node.Text.StartsWith("+ Отдел 19") || node.Text.StartsWith("+ Отдел19") || node.Text.StartsWith("Отдел 19") || node.Text.StartsWith("Отдел19"))*/
+                if (node.Text.StartsWith(txtNumber.Text.Trim()) || node.Text.StartsWith("+" + txtNumber.Text.Trim()) || node.Text.StartsWith("+ " + txtNumber.Text.Trim()))
+
                 {
                     node.ForeColor = Color.Red;
                     node.NodeFont = new Font("Consolas", 9, FontStyle.Bold);
