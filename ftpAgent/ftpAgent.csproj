@@ -45,7 +45,9 @@
     <Reference Include="INIManager">
       <HintPath>..\INIManager.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
+    <Reference Include="System.Activities" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -94,6 +96,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="iconfinder_private_mail_44691.ico" />
+    <None Include="Resources\double-arrows %282%29.png" />
+    <None Include="Resources\double-arrows %281%29.png" />
+    <None Include="Resources\double-arrows.png" />
+    <None Include="Resources\new.png" />
+    <None Include="Resources\note.png" />
+    <None Include="Resources\attachment.png" />
+    <None Include="Resources\attach.png" />
+    <None Include="Resources\paperclip256_24843.ico" />
     <None Include="Resources\wrench.png" />
     <None Include="Resources\support.png" />
     <None Include="Resources\publish.png" />
@@ -120,6 +130,26 @@
     <None Include="Resources\control_equalizer_blue.png" />
     <None Include="Resources\connect.png" />
     <None Include="Resources\busy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

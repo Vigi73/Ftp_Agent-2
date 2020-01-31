@@ -31,10 +31,14 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.btnAdd2 = new System.Windows.Forms.Button();
+            this.btnAdd1 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnAddFile1 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.stbDate = new System.Windows.Forms.ToolStripStatusLabel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
@@ -42,11 +46,11 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.treeView2 = new System.Windows.Forms.TreeView();
-            this.treeView1 = new System.Windows.Forms.TreeView();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.connectToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
             this.ваходToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.treeView1 = new System.Windows.Forms.TreeView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.chTopMost = new System.Windows.Forms.CheckBox();
@@ -71,6 +75,7 @@
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.statusStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -78,6 +83,50 @@
             this.tabPage2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // btnAdd2
+            // 
+            this.btnAdd2.Image = global::ftpAgent.Properties.Resources._new;
+            this.btnAdd2.Location = new System.Drawing.Point(299, -1);
+            this.btnAdd2.Name = "btnAdd2";
+            this.btnAdd2.Size = new System.Drawing.Size(25, 25);
+            this.btnAdd2.TabIndex = 7;
+            this.toolTip1.SetToolTip(this.btnAdd2, "Создать каталог");
+            this.btnAdd2.UseVisualStyleBackColor = true;
+            this.btnAdd2.Click += new System.EventHandler(this.btnAdd2_Click);
+            // 
+            // btnAdd1
+            // 
+            this.btnAdd1.Image = global::ftpAgent.Properties.Resources._new;
+            this.btnAdd1.Location = new System.Drawing.Point(2, -1);
+            this.btnAdd1.Name = "btnAdd1";
+            this.btnAdd1.Size = new System.Drawing.Size(25, 25);
+            this.btnAdd1.TabIndex = 6;
+            this.toolTip1.SetToolTip(this.btnAdd1, "Создать каталог");
+            this.btnAdd1.UseVisualStyleBackColor = true;
+            this.btnAdd1.Click += new System.EventHandler(this.btnAdd1_Click);
+            // 
+            // button3
+            // 
+            this.button3.Image = global::ftpAgent.Properties.Resources.double_arrows__2_;
+            this.button3.Location = new System.Drawing.Point(565, -1);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(25, 25);
+            this.button3.TabIndex = 3;
+            this.toolTip1.SetToolTip(this.button3, "Каталог выше");
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button2
+            // 
+            this.button2.Image = global::ftpAgent.Properties.Resources.double_arrows__2_;
+            this.button2.Location = new System.Drawing.Point(273, -1);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(25, 25);
+            this.button2.TabIndex = 1;
+            this.toolTip1.SetToolTip(this.button2, "Каталог выше");
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -109,27 +158,27 @@
             this.imageList1.Images.SetKeyName(10, "iconfinder_22_1555770.png");
             this.imageList1.Images.SetKeyName(11, "iconfinder_floppy_disk_save_103863.png");
             // 
-            // button2
+            // btnAddFile1
             // 
-            this.button2.Image = global::ftpAgent.Properties.Resources.iconfinder_Open_1493293;
-            this.button2.Location = new System.Drawing.Point(253, 27);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(41, 32);
-            this.button2.TabIndex = 1;
-            this.toolTip1.SetToolTip(this.button2, "Каталог выше");
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnAddFile1.Image = global::ftpAgent.Properties.Resources.note;
+            this.btnAddFile1.Location = new System.Drawing.Point(24, -1);
+            this.btnAddFile1.Name = "btnAddFile1";
+            this.btnAddFile1.Size = new System.Drawing.Size(25, 25);
+            this.btnAddFile1.TabIndex = 10;
+            this.toolTip1.SetToolTip(this.btnAddFile1, "Загрузка файла");
+            this.btnAddFile1.UseVisualStyleBackColor = true;
+            this.btnAddFile1.Click += new System.EventHandler(this.btnAddFile1_Click);
             // 
-            // button3
+            // button4
             // 
-            this.button3.Image = global::ftpAgent.Properties.Resources.iconfinder_Open_1493293;
-            this.button3.Location = new System.Drawing.Point(545, 27);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(41, 32);
-            this.button3.TabIndex = 3;
-            this.toolTip1.SetToolTip(this.button3, "Каталог выше");
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.button4.Image = global::ftpAgent.Properties.Resources.note;
+            this.button4.Location = new System.Drawing.Point(322, -1);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(25, 25);
+            this.button4.TabIndex = 11;
+            this.toolTip1.SetToolTip(this.button4, "Загрузка файла");
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click_1);
             // 
             // statusStrip1
             // 
@@ -163,12 +212,17 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.tabPage1.Controls.Add(this.button4);
+            this.tabPage1.Controls.Add(this.btnAddFile1);
+            this.tabPage1.Controls.Add(this.btnAdd2);
+            this.tabPage1.Controls.Add(this.btnAdd1);
             this.tabPage1.Controls.Add(this.label10);
             this.tabPage1.Controls.Add(this.label9);
             this.tabPage1.Controls.Add(this.button3);
             this.tabPage1.Controls.Add(this.button2);
             this.tabPage1.Controls.Add(this.treeView2);
             this.tabPage1.Controls.Add(this.treeView1);
+            this.tabPage1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -180,7 +234,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label10.Location = new System.Drawing.Point(296, 7);
+            this.label10.Location = new System.Drawing.Point(380, 6);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(151, 13);
             this.label10.TabIndex = 5;
@@ -188,9 +242,8 @@
             // 
             // label9
             // 
-            this.label9.AutoSize = true;
             this.label9.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label9.Location = new System.Drawing.Point(3, 7);
+            this.label9.Location = new System.Drawing.Point(113, 7);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(90, 13);
             this.label9.TabIndex = 4;
@@ -208,20 +261,6 @@
             this.treeView2.Size = new System.Drawing.Size(290, 469);
             this.treeView2.TabIndex = 2;
             this.treeView2.DoubleClick += new System.EventHandler(this.treeView2_DoubleClick_1);
-            // 
-            // treeView1
-            // 
-            this.treeView1.BackColor = System.Drawing.Color.FloralWhite;
-            this.treeView1.ContextMenuStrip = this.contextMenuStrip1;
-            this.treeView1.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.treeView1.ImageIndex = 0;
-            this.treeView1.ImageList = this.imageList1;
-            this.treeView1.Location = new System.Drawing.Point(3, 23);
-            this.treeView1.Name = "treeView1";
-            this.treeView1.SelectedImageIndex = 0;
-            this.treeView1.Size = new System.Drawing.Size(294, 469);
-            this.treeView1.TabIndex = 0;
-            this.treeView1.DoubleClick += new System.EventHandler(this.treeView1_DoubleClick);
             // 
             // contextMenuStrip1
             // 
@@ -255,9 +294,23 @@
             this.ваходToolStripMenuItem.Text = "Выход";
             this.ваходToolStripMenuItem.Click += new System.EventHandler(this.ваходToolStripMenuItem_Click);
             // 
+            // treeView1
+            // 
+            this.treeView1.BackColor = System.Drawing.Color.FloralWhite;
+            this.treeView1.ContextMenuStrip = this.contextMenuStrip1;
+            this.treeView1.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.treeView1.ImageIndex = 0;
+            this.treeView1.ImageList = this.imageList1;
+            this.treeView1.Location = new System.Drawing.Point(3, 23);
+            this.treeView1.Name = "treeView1";
+            this.treeView1.SelectedImageIndex = 0;
+            this.treeView1.Size = new System.Drawing.Size(294, 469);
+            this.treeView1.TabIndex = 0;
+            this.treeView1.DoubleClick += new System.EventHandler(this.treeView1_DoubleClick);
+            // 
             // tabPage2
             // 
-            this.tabPage2.BackColor = System.Drawing.Color.Cornsilk;
+            this.tabPage2.BackColor = System.Drawing.Color.DarkSlateGray;
             this.tabPage2.Controls.Add(this.groupBox1);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
@@ -293,9 +346,9 @@
             this.groupBox1.Controls.Add(this.txtServer);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.txtPath);
-            this.groupBox1.Location = new System.Drawing.Point(6, 6);
+            this.groupBox1.Location = new System.Drawing.Point(3, 3);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(583, 498);
+            this.groupBox1.Size = new System.Drawing.Size(586, 488);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Настройки:";
@@ -475,6 +528,7 @@
             // 
             // Form1
             // 
+            this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(599, 545);
@@ -485,7 +539,7 @@
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FTP-Агент 2.4";
+            this.Text = "FTP-Агент 2.5";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.statusStrip1.ResumeLayout(false);
@@ -546,6 +600,11 @@
         private System.Windows.Forms.TreeView treeView2;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Button btnAdd1;
+        private System.Windows.Forms.Button btnAdd2;
+        private System.Windows.Forms.ColorDialog colorDialog1;
+        private System.Windows.Forms.Button btnAddFile1;
+        private System.Windows.Forms.Button button4;
     }
 }
 

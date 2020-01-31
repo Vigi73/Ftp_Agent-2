@@ -49,3 +49,4 @@ E:\ftp_agent2\ftpAgent\obj\Debug\ftpAgent.csproj.GenerateResource.cache
 E:\ftp_agent2\ftpAgent\obj\Debug\ftpAgent.csproj.CopyComplete
 E:\ftp_agent2\ftpAgent\obj\Debug\ftpAgent.exe
 E:\ftp_agent2\ftpAgent\obj\Debug\ftpAgent.pdb
+E:\ftp_agent2\ftpAgent\obj\Debug\ftpAgent.csproj.ResolveComReference.cache

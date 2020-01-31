@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Activities.Expressions;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,6 +12,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using BytesRoad.Net.Ftp;
 using INIManager;
+
 
 namespace ftpAgent
 {
@@ -32,6 +34,8 @@ namespace ftpAgent
         string timeWork;
 
         FtpClient client2 = new FtpClient();
+        string currentPath;
+        string currentPath2;
 
 
 
@@ -258,7 +262,7 @@ namespace ftpAgent
                 string folderData = timeWork.Split(' ')[0].Split('.')[2].Trim();
                 int nDate = int.Parse(timeWork.Split(' ')[0].Split('.')[1]);
                 string nowDate = timeWork.Split(' ')[0];
-                string currentPath = String.Format("{0}{1}/{2}. {3}/{4}", txtPath.Text, folderData, nDate.ToString(), month[nDate], nowDate);
+                currentPath = String.Format("{0}{1}/{2}. {3}/{4}", txtPath.Text, folderData, nDate.ToString(), month[nDate], nowDate);
                 client.ChangeDirectory(2000, currentPath);
 
 
@@ -315,8 +319,8 @@ namespace ftpAgent
                 string folderData = timeWork.Split(' ')[0].Split('.')[2].Trim();
                 int nDate = int.Parse(timeWork.Split(' ')[0].Split('.')[1]);
                 string nowDate = timeWork.Split(' ')[0];
-                string currentPath = String.Format("{0}!ИСПОЛНЕНИЕ И РАСТОРЖЕНИЕ/{1}/{2}. {3}/", txtPath.Text, folderData, nDate.ToString(), month[nDate]);
-                client2.ChangeDirectory(2000, currentPath);
+                currentPath2 = String.Format("{0}!ИСПОЛНЕНИЕ И РАСТОРЖЕНИЕ/{1}/{2}. {3}/", txtPath.Text, folderData, nDate.ToString(), month[nDate]);
+                client2.ChangeDirectory(2000, currentPath2);
 
 
                 //client.ChangeDirectory(2000, txtPath.Text); // Начальная папка при старте...
@@ -565,5 +569,139 @@ namespace ftpAgent
         }
 
        
+
+        private void btnAdd1_Click(object sender, EventArgs e)
+        {
+            
+            timer1.Enabled = false;
+            string txtFolder = Microsoft.VisualBasic.Interaction.InputBox("Имя каталога:", "Ввод...", "Новая папка");
+            if (txtFolder != "")
+            {
+                client.CreateDirectory(2000, txtFolder);
+                treeView1.Nodes.Clear();
+                connect();
+            }
+
+            
+
+            timer1.Enabled = true;
+        }
+
+        private void btnFile1_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Удалить Выбранный каталог?", "Удаление", MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+            {
+                client.DeleteDirectory(2000, treeView1.SelectedNode.Text);
+                treeView1.Nodes.Clear();
+                connect();
+            }            
+        }
+
+        private void btnAdd2_Click(object sender, EventArgs e)
+        {
+            timer1.Enabled = false;
+            string txtFolder = Microsoft.VisualBasic.Interaction.InputBox("Имя каталога:", "Ввод...", "Новая папка");
+            if (txtFolder != "")
+            {
+                client2.CreateDirectory(2000, txtFolder);
+                treeView2.Nodes.Clear();
+                connect2();
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+            if (MessageBox.Show("Удалить Выбранный каталог?", "Удаление", MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+            {
+                client2.DeleteDirectory(2000, treeView2.SelectedNode.Text);
+                treeView2.Nodes.Clear();
+                connect2();
+            }
+        }
+
+        public void UploadFile(string LocalFile)
+            
+        {
+            int Timeout = 2000;
+            // build the target file path
+
+            /* string target = System.IO.Path.Combine(@"/" + currentPath + @"/" + treeView1.SelectedNode.Text + @"/",
+                             System.IO.Path.GetFileName(LocalFile));*/
+
+            string target = System.IO.Path.Combine(client.GetWorkingDirectory(2000) + @"/",
+                            System.IO.Path.GetFileName(LocalFile));
+
+
+            // synchronously upload the file
+            client.PutFile(Timeout, target, LocalFile);
+
+            MessageBox.Show($"Файл: {LocalFile} успешно загружен...");
+
+            treeView1.Nodes.Clear();
+            connect();
+
+            //Disconnect
+            //client.Disconnect(Timeout);
+        }
+
+        public void UploadFile2(string LocalFile)
+
+        {
+            int Timeout = 2000;
+            // build the target file path
+
+            string target = System.IO.Path.Combine(client2.GetWorkingDirectory(2000) + @"/",
+            System.IO.Path.GetFileName(LocalFile));
+            
+
+          
+
+            // synchronously upload the file
+            client2.PutFile(Timeout, target, LocalFile);
+            MessageBox.Show($"Файл: {LocalFile} успешно загружен...");
+            treeView2.Nodes.Clear();
+            connect2();
+            //Disconnect
+            //client.Disconnect(Timeout);
+           
+        }
+
+
+        private void btnAddFile1_Click(object sender, EventArgs e)
+        {
+            
+            try
+            {
+
+                if (openFileDialog1.ShowDialog() == DialogResult.OK)
+                {
+                    UploadFile(openFileDialog1.FileName);
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Для добавления файла просто выделите нужный каталог");
+            }
+
+        }
+        private void button4_Click_1(object sender, EventArgs e)
+        {
+
+            try
+            {
+
+                if (openFileDialog1.ShowDialog() == DialogResult.OK)
+                {
+                    UploadFile2(openFileDialog1.FileName);
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Что-то пошло не так :(");
+            }
+        }
     }
 }
