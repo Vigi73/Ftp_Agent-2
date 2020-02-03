@@ -574,7 +574,7 @@ namespace ftpAgent
         {
             
             timer1.Enabled = false;
-            string txtFolder = Microsoft.VisualBasic.Interaction.InputBox("Имя каталога:", "Ввод...", "Новая папка");
+            string txtFolder = Microsoft.VisualBasic.Interaction.InputBox("Имя каталога:", "Ввод...", $"{txtNumber.Text}");
             if (txtFolder != "")
             {
                 client.CreateDirectory(2000, txtFolder);
@@ -601,7 +601,7 @@ namespace ftpAgent
         private void btnAdd2_Click(object sender, EventArgs e)
         {
             timer1.Enabled = false;
-            string txtFolder = Microsoft.VisualBasic.Interaction.InputBox("Имя каталога:", "Ввод...", "Новая папка");
+            string txtFolder = Microsoft.VisualBasic.Interaction.InputBox("Имя каталога:", "Ввод...", $"{txtNumber.Text}");
             if (txtFolder != "")
             {
                 client2.CreateDirectory(2000, txtFolder);
