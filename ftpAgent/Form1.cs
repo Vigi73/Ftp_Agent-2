@@ -432,6 +432,8 @@ namespace ftpAgent
             getDataFromIni();
             connect();
             connect2();
+            stbDate.Text = String.Format("Дата слежения: {0}", timeWork.Split(' ')[0]);
+            this.TopMost = chTopMost.Checked;
         }
 
         public void getDataFromIni()
@@ -493,12 +495,14 @@ namespace ftpAgent
 
         private void button1_Click(object sender, EventArgs e)
         {
+            
             saveAllData();
             getDataFromIni();
             treeView1.Nodes.Clear();
             treeView2.Nodes.Clear();
             connect();
             connect2();
+            stbDate.Text = String.Format("Дата слежения: {0}", timeWork.Split(' ')[0]);
         }
 
         public void saveAllData()
@@ -536,7 +540,7 @@ namespace ftpAgent
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            stbDate.Text = String.Format("Дата слежения: {0}", timeWork.Split(' ')[0]);
+            //stbDate.Text = String.Format("Дата слежения: {0}", timeWork.Split(' ')[0]);
             this.TopMost = chTopMost.Checked;
         }
 
@@ -683,7 +687,7 @@ namespace ftpAgent
             }
             catch
             {
-                MessageBox.Show("Для добавления файла просто выделите нужный каталог");
+                MessageBox.Show("Что-то пошло не так :(");
             }
 
         }
@@ -702,6 +706,39 @@ namespace ftpAgent
             {
                 MessageBox.Show("Что-то пошло не так :(");
             }
+        }
+
+        private void Form1_Layout(object sender, LayoutEventArgs e)
+        {
+           // stbDate.Text = String.Format("Дата слежения: {0}", timeWork.Split(' ')[0]);
+        }
+
+        private void chTopMost_CheckedChanged(object sender, EventArgs e)
+        {
+            this.TopMost = chTopMost.Checked;
+        }
+
+        private void подключениеToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            treeView1.Nodes.Clear();
+            connect();
+            treeView2.Nodes.Clear();
+            connect2();
+        }
+
+        private void ваходToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void выходToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           //
+        }
+
+        private void ваходToolStripMenuItem1_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

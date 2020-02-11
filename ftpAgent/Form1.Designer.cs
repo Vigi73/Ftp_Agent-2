@@ -76,12 +76,17 @@
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
+            this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.подключениеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
+            this.ваходToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.contextMenuStrip2.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnAdd2
@@ -130,13 +135,15 @@
             // 
             // button1
             // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button1.ImageIndex = 11;
             this.button1.ImageList = this.imageList1;
-            this.button1.Location = new System.Drawing.Point(7, 440);
+            this.button1.Location = new System.Drawing.Point(222, 435);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(570, 26);
+            this.button1.Size = new System.Drawing.Size(141, 26);
             this.button1.TabIndex = 19;
+            this.button1.Text = "Сохранить настройки:";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.toolTip1.SetToolTip(this.button1, "Сохранить настройки");
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -252,7 +259,7 @@
             // treeView2
             // 
             this.treeView2.BackColor = System.Drawing.Color.FloralWhite;
-            this.treeView2.ContextMenuStrip = this.contextMenuStrip1;
+            this.treeView2.ContextMenuStrip = this.contextMenuStrip2;
             this.treeView2.ImageIndex = 0;
             this.treeView2.ImageList = this.imageList1;
             this.treeView2.Location = new System.Drawing.Point(299, 23);
@@ -325,7 +332,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.AutoSize = true;
-            this.groupBox1.BackColor = System.Drawing.Color.Snow;
+            this.groupBox1.BackColor = System.Drawing.Color.Bisque;
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.chTopMost);
             this.groupBox1.Controls.Add(this.label8);
@@ -362,6 +369,7 @@
             this.chTopMost.TabIndex = 18;
             this.chTopMost.Text = "По верх окон";
             this.chTopMost.UseVisualStyleBackColor = true;
+            this.chTopMost.CheckedChanged += new System.EventHandler(this.chTopMost_CheckedChanged);
             // 
             // label8
             // 
@@ -522,9 +530,40 @@
             // 
             // timer1
             // 
-            this.timer1.Enabled = true;
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // contextMenuStrip2
+            // 
+            this.contextMenuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.подключениеToolStripMenuItem,
+            this.toolStripMenuItem1,
+            this.ваходToolStripMenuItem1});
+            this.contextMenuStrip2.Name = "contextMenuStrip2";
+            this.contextMenuStrip2.Size = new System.Drawing.Size(195, 76);
+            // 
+            // подключениеToolStripMenuItem
+            // 
+            this.подключениеToolStripMenuItem.Image = global::ftpAgent.Properties.Resources.connect;
+            this.подключениеToolStripMenuItem.Name = "подключениеToolStripMenuItem";
+            this.подключениеToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.A)));
+            this.подключениеToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
+            this.подключениеToolStripMenuItem.Text = "Подключение";
+            this.подключениеToolStripMenuItem.Click += new System.EventHandler(this.подключениеToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(177, 6);
+            // 
+            // ваходToolStripMenuItem1
+            // 
+            this.ваходToolStripMenuItem1.Image = global::ftpAgent.Properties.Resources.door_in;
+            this.ваходToolStripMenuItem1.Name = "ваходToolStripMenuItem1";
+            this.ваходToolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Z)));
+            this.ваходToolStripMenuItem1.Size = new System.Drawing.Size(194, 22);
+            this.ваходToolStripMenuItem1.Text = "Ваход";
+            this.ваходToolStripMenuItem1.Click += new System.EventHandler(this.ваходToolStripMenuItem1_Click_1);
             // 
             // Form1
             // 
@@ -539,9 +578,10 @@
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FTP-Агент 2.6";
+            this.Text = "FTP-Агент 2.7";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.Layout += new System.Windows.Forms.LayoutEventHandler(this.Form1_Layout);
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             this.tabControl1.ResumeLayout(false);
@@ -552,6 +592,7 @@
             this.tabPage2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.contextMenuStrip2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -605,6 +646,10 @@
         private System.Windows.Forms.ColorDialog colorDialog1;
         private System.Windows.Forms.Button btnAddFile1;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip2;
+        private System.Windows.Forms.ToolStripMenuItem подключениеToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem ваходToolStripMenuItem1;
     }
 }
 
