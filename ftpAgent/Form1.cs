@@ -774,5 +774,21 @@ namespace ftpAgent
         {
 
         }
+
+        private void rbPath1_CheckedChanged(object sender, EventArgs e)
+        {
+            btnAdd1.Enabled = true;
+            btnAdd2.Enabled = true;
+            btnAddFile1.Enabled = true;
+            button4.Enabled = true;
+        }
+
+        private void rbPath2_CheckedChanged(object sender, EventArgs e)
+        {
+            btnAdd1.Enabled = false;
+            btnAdd2.Enabled = false;
+            btnAddFile1.Enabled = false;
+            button4.Enabled = false;
+        }
     }
 }

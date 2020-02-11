@@ -41,6 +41,8 @@
             this.button4 = new System.Windows.Forms.Button();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.stbDate = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.lbl2 = new System.Windows.Forms.Label();
@@ -57,6 +59,9 @@
             this.ваходToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.rbPath2 = new System.Windows.Forms.RadioButton();
+            this.txtPath2 = new System.Windows.Forms.TextBox();
+            this.rbPath1 = new System.Windows.Forms.RadioButton();
             this.chTopMost = new System.Windows.Forms.CheckBox();
             this.label8 = new System.Windows.Forms.Label();
             this.dateTime1 = new System.Windows.Forms.DateTimePicker();
@@ -79,11 +84,6 @@
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
-            this.rbPath1 = new System.Windows.Forms.RadioButton();
-            this.txtPath2 = new System.Windows.Forms.TextBox();
-            this.rbPath2 = new System.Windows.Forms.RadioButton();
-            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
             this.statusStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -208,6 +208,20 @@
             this.stbDate.Name = "stbDate";
             this.stbDate.Size = new System.Drawing.Size(92, 17);
             this.stbDate.Text = "Дата слежения:";
+            // 
+            // toolStripStatusLabel1
+            // 
+            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(0, 17);
+            this.toolStripStatusLabel1.Click += new System.EventHandler(this.toolStripStatusLabel1_Click);
+            // 
+            // toolStripStatusLabel2
+            // 
+            this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
+            this.toolStripStatusLabel2.Size = new System.Drawing.Size(492, 17);
+            this.toolStripStatusLabel2.Spring = true;
+            this.toolStripStatusLabel2.Text = "ВХОДЯЩИЕ";
+            this.toolStripStatusLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // tabControl1
             // 
@@ -400,6 +414,38 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Настройки:";
             // 
+            // rbPath2
+            // 
+            this.rbPath2.AutoSize = true;
+            this.rbPath2.Location = new System.Drawing.Point(118, 48);
+            this.rbPath2.Name = "rbPath2";
+            this.rbPath2.Size = new System.Drawing.Size(98, 17);
+            this.rbPath2.TabIndex = 22;
+            this.rbPath2.Text = "Базовый путь:";
+            this.rbPath2.UseVisualStyleBackColor = true;
+            this.rbPath2.CheckedChanged += new System.EventHandler(this.rbPath2_CheckedChanged);
+            // 
+            // txtPath2
+            // 
+            this.txtPath2.Location = new System.Drawing.Point(222, 45);
+            this.txtPath2.Name = "txtPath2";
+            this.txtPath2.Size = new System.Drawing.Size(355, 20);
+            this.txtPath2.TabIndex = 21;
+            this.txtPath2.Text = "/";
+            // 
+            // rbPath1
+            // 
+            this.rbPath1.AutoSize = true;
+            this.rbPath1.Checked = true;
+            this.rbPath1.Location = new System.Drawing.Point(118, 22);
+            this.rbPath1.Name = "rbPath1";
+            this.rbPath1.Size = new System.Drawing.Size(98, 17);
+            this.rbPath1.TabIndex = 20;
+            this.rbPath1.TabStop = true;
+            this.rbPath1.Text = "Базовый путь:";
+            this.rbPath1.UseVisualStyleBackColor = true;
+            this.rbPath1.CheckedChanged += new System.EventHandler(this.rbPath1_CheckedChanged);
+            // 
             // chTopMost
             // 
             this.chTopMost.AutoSize = true;
@@ -564,50 +610,6 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // rbPath1
-            // 
-            this.rbPath1.AutoSize = true;
-            this.rbPath1.Checked = true;
-            this.rbPath1.Location = new System.Drawing.Point(118, 22);
-            this.rbPath1.Name = "rbPath1";
-            this.rbPath1.Size = new System.Drawing.Size(98, 17);
-            this.rbPath1.TabIndex = 20;
-            this.rbPath1.TabStop = true;
-            this.rbPath1.Text = "Базовый путь:";
-            this.rbPath1.UseVisualStyleBackColor = true;
-            // 
-            // txtPath2
-            // 
-            this.txtPath2.Location = new System.Drawing.Point(222, 45);
-            this.txtPath2.Name = "txtPath2";
-            this.txtPath2.Size = new System.Drawing.Size(355, 20);
-            this.txtPath2.TabIndex = 21;
-            this.txtPath2.Text = "/";
-            // 
-            // rbPath2
-            // 
-            this.rbPath2.AutoSize = true;
-            this.rbPath2.Location = new System.Drawing.Point(118, 48);
-            this.rbPath2.Name = "rbPath2";
-            this.rbPath2.Size = new System.Drawing.Size(98, 17);
-            this.rbPath2.TabIndex = 22;
-            this.rbPath2.Text = "Базовый путь:";
-            this.rbPath2.UseVisualStyleBackColor = true;
-            // 
-            // toolStripStatusLabel1
-            // 
-            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(0, 17);
-            this.toolStripStatusLabel1.Click += new System.EventHandler(this.toolStripStatusLabel1_Click);
-            // 
-            // toolStripStatusLabel2
-            // 
-            this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
-            this.toolStripStatusLabel2.Size = new System.Drawing.Size(461, 17);
-            this.toolStripStatusLabel2.Spring = true;
-            this.toolStripStatusLabel2.Text = "ВХОДЯЩИЕ";
-            this.toolStripStatusLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
             // Form1
             // 
             this.AllowDrop = true;
@@ -621,7 +623,7 @@
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FTP-Агент 2.8";
+            this.Text = "FTP-Агент 2.8.1";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.Layout += new System.Windows.Forms.LayoutEventHandler(this.Form1_Layout);
