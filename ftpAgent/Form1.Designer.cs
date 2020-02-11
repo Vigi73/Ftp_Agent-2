@@ -43,14 +43,18 @@
             this.stbDate = new System.Windows.Forms.ToolStripStatusLabel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
+            this.lbl2 = new System.Windows.Forms.Label();
+            this.lbl1 = new System.Windows.Forms.Label();
             this.treeView2 = new System.Windows.Forms.TreeView();
+            this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.подключениеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
+            this.ваходToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.treeView1 = new System.Windows.Forms.TreeView();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.connectToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
             this.ваходToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.treeView1 = new System.Windows.Forms.TreeView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.chTopMost = new System.Windows.Forms.CheckBox();
@@ -70,23 +74,23 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtPort = new System.Windows.Forms.TextBox();
             this.txtServer = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.txtPath = new System.Windows.Forms.TextBox();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
-            this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.подключениеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
-            this.ваходToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.rbPath1 = new System.Windows.Forms.RadioButton();
+            this.txtPath2 = new System.Windows.Forms.TextBox();
+            this.rbPath2 = new System.Windows.Forms.RadioButton();
+            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
             this.statusStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.contextMenuStrip2.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            this.contextMenuStrip2.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnAdd2
@@ -190,7 +194,9 @@
             // statusStrip1
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.stbDate});
+            this.stbDate,
+            this.toolStripStatusLabel1,
+            this.toolStripStatusLabel2});
             this.statusStrip1.Location = new System.Drawing.Point(0, 523);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(599, 22);
@@ -223,8 +229,8 @@
             this.tabPage1.Controls.Add(this.btnAddFile1);
             this.tabPage1.Controls.Add(this.btnAdd2);
             this.tabPage1.Controls.Add(this.btnAdd1);
-            this.tabPage1.Controls.Add(this.label10);
-            this.tabPage1.Controls.Add(this.label9);
+            this.tabPage1.Controls.Add(this.lbl2);
+            this.tabPage1.Controls.Add(this.lbl1);
             this.tabPage1.Controls.Add(this.button3);
             this.tabPage1.Controls.Add(this.button2);
             this.tabPage1.Controls.Add(this.treeView2);
@@ -237,24 +243,24 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "FTP";
             // 
-            // label10
+            // lbl2
             // 
-            this.label10.AutoSize = true;
-            this.label10.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label10.Location = new System.Drawing.Point(380, 6);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(151, 13);
-            this.label10.TabIndex = 5;
-            this.label10.Text = "Исполнение и расторжение:";
+            this.lbl2.AutoSize = true;
+            this.lbl2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lbl2.Location = new System.Drawing.Point(353, 5);
+            this.lbl2.Name = "lbl2";
+            this.lbl2.Size = new System.Drawing.Size(151, 13);
+            this.lbl2.TabIndex = 5;
+            this.lbl2.Text = "Исполнение и расторжение:";
             // 
-            // label9
+            // lbl1
             // 
-            this.label9.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label9.Location = new System.Drawing.Point(113, 7);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(90, 13);
-            this.label9.TabIndex = 4;
-            this.label9.Text = "Контроль 44-фз:";
+            this.lbl1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lbl1.Location = new System.Drawing.Point(55, 6);
+            this.lbl1.Name = "lbl1";
+            this.lbl1.Size = new System.Drawing.Size(90, 13);
+            this.lbl1.TabIndex = 4;
+            this.lbl1.Text = "Контроль 44-фз:";
             // 
             // treeView2
             // 
@@ -268,6 +274,52 @@
             this.treeView2.Size = new System.Drawing.Size(290, 469);
             this.treeView2.TabIndex = 2;
             this.treeView2.DoubleClick += new System.EventHandler(this.treeView2_DoubleClick_1);
+            // 
+            // contextMenuStrip2
+            // 
+            this.contextMenuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.подключениеToolStripMenuItem,
+            this.toolStripMenuItem1,
+            this.ваходToolStripMenuItem1});
+            this.contextMenuStrip2.Name = "contextMenuStrip2";
+            this.contextMenuStrip2.Size = new System.Drawing.Size(195, 54);
+            // 
+            // подключениеToolStripMenuItem
+            // 
+            this.подключениеToolStripMenuItem.Image = global::ftpAgent.Properties.Resources.connect;
+            this.подключениеToolStripMenuItem.Name = "подключениеToolStripMenuItem";
+            this.подключениеToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.A)));
+            this.подключениеToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
+            this.подключениеToolStripMenuItem.Text = "Подключение";
+            this.подключениеToolStripMenuItem.Click += new System.EventHandler(this.подключениеToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(191, 6);
+            // 
+            // ваходToolStripMenuItem1
+            // 
+            this.ваходToolStripMenuItem1.Image = global::ftpAgent.Properties.Resources.door_in;
+            this.ваходToolStripMenuItem1.Name = "ваходToolStripMenuItem1";
+            this.ваходToolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Z)));
+            this.ваходToolStripMenuItem1.Size = new System.Drawing.Size(194, 22);
+            this.ваходToolStripMenuItem1.Text = "Ваход";
+            this.ваходToolStripMenuItem1.Click += new System.EventHandler(this.ваходToolStripMenuItem1_Click_1);
+            // 
+            // treeView1
+            // 
+            this.treeView1.BackColor = System.Drawing.Color.FloralWhite;
+            this.treeView1.ContextMenuStrip = this.contextMenuStrip1;
+            this.treeView1.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.treeView1.ImageIndex = 0;
+            this.treeView1.ImageList = this.imageList1;
+            this.treeView1.Location = new System.Drawing.Point(3, 23);
+            this.treeView1.Name = "treeView1";
+            this.treeView1.SelectedImageIndex = 0;
+            this.treeView1.Size = new System.Drawing.Size(294, 469);
+            this.treeView1.TabIndex = 0;
+            this.treeView1.DoubleClick += new System.EventHandler(this.treeView1_DoubleClick);
             // 
             // contextMenuStrip1
             // 
@@ -301,20 +353,6 @@
             this.ваходToolStripMenuItem.Text = "Выход";
             this.ваходToolStripMenuItem.Click += new System.EventHandler(this.ваходToolStripMenuItem_Click);
             // 
-            // treeView1
-            // 
-            this.treeView1.BackColor = System.Drawing.Color.FloralWhite;
-            this.treeView1.ContextMenuStrip = this.contextMenuStrip1;
-            this.treeView1.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.treeView1.ImageIndex = 0;
-            this.treeView1.ImageList = this.imageList1;
-            this.treeView1.Location = new System.Drawing.Point(3, 23);
-            this.treeView1.Name = "treeView1";
-            this.treeView1.SelectedImageIndex = 0;
-            this.treeView1.Size = new System.Drawing.Size(294, 469);
-            this.treeView1.TabIndex = 0;
-            this.treeView1.DoubleClick += new System.EventHandler(this.treeView1_DoubleClick);
-            // 
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.DarkSlateGray;
@@ -333,6 +371,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.AutoSize = true;
             this.groupBox1.BackColor = System.Drawing.Color.Bisque;
+            this.groupBox1.Controls.Add(this.rbPath2);
+            this.groupBox1.Controls.Add(this.txtPath2);
+            this.groupBox1.Controls.Add(this.rbPath1);
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.chTopMost);
             this.groupBox1.Controls.Add(this.label8);
@@ -351,7 +392,6 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.txtPort);
             this.groupBox1.Controls.Add(this.txtServer);
-            this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.txtPath);
             this.groupBox1.Location = new System.Drawing.Point(3, 3);
             this.groupBox1.Name = "groupBox1";
@@ -507,20 +547,11 @@
             this.txtServer.Size = new System.Drawing.Size(404, 20);
             this.txtServer.TabIndex = 2;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 32);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(80, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Базовый путь:";
-            // 
             // txtPath
             // 
-            this.txtPath.Location = new System.Drawing.Point(6, 47);
+            this.txtPath.Location = new System.Drawing.Point(222, 19);
             this.txtPath.Name = "txtPath";
-            this.txtPath.Size = new System.Drawing.Size(571, 20);
+            this.txtPath.Size = new System.Drawing.Size(355, 20);
             this.txtPath.TabIndex = 0;
             this.txtPath.Text = "/";
             // 
@@ -533,37 +564,49 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // contextMenuStrip2
+            // rbPath1
             // 
-            this.contextMenuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.подключениеToolStripMenuItem,
-            this.toolStripMenuItem1,
-            this.ваходToolStripMenuItem1});
-            this.contextMenuStrip2.Name = "contextMenuStrip2";
-            this.contextMenuStrip2.Size = new System.Drawing.Size(195, 76);
+            this.rbPath1.AutoSize = true;
+            this.rbPath1.Checked = true;
+            this.rbPath1.Location = new System.Drawing.Point(118, 22);
+            this.rbPath1.Name = "rbPath1";
+            this.rbPath1.Size = new System.Drawing.Size(98, 17);
+            this.rbPath1.TabIndex = 20;
+            this.rbPath1.TabStop = true;
+            this.rbPath1.Text = "Базовый путь:";
+            this.rbPath1.UseVisualStyleBackColor = true;
             // 
-            // подключениеToolStripMenuItem
+            // txtPath2
             // 
-            this.подключениеToolStripMenuItem.Image = global::ftpAgent.Properties.Resources.connect;
-            this.подключениеToolStripMenuItem.Name = "подключениеToolStripMenuItem";
-            this.подключениеToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.A)));
-            this.подключениеToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
-            this.подключениеToolStripMenuItem.Text = "Подключение";
-            this.подключениеToolStripMenuItem.Click += new System.EventHandler(this.подключениеToolStripMenuItem_Click);
+            this.txtPath2.Location = new System.Drawing.Point(222, 45);
+            this.txtPath2.Name = "txtPath2";
+            this.txtPath2.Size = new System.Drawing.Size(355, 20);
+            this.txtPath2.TabIndex = 21;
+            this.txtPath2.Text = "/";
             // 
-            // toolStripMenuItem1
+            // rbPath2
             // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(177, 6);
+            this.rbPath2.AutoSize = true;
+            this.rbPath2.Location = new System.Drawing.Point(118, 48);
+            this.rbPath2.Name = "rbPath2";
+            this.rbPath2.Size = new System.Drawing.Size(98, 17);
+            this.rbPath2.TabIndex = 22;
+            this.rbPath2.Text = "Базовый путь:";
+            this.rbPath2.UseVisualStyleBackColor = true;
             // 
-            // ваходToolStripMenuItem1
+            // toolStripStatusLabel1
             // 
-            this.ваходToolStripMenuItem1.Image = global::ftpAgent.Properties.Resources.door_in;
-            this.ваходToolStripMenuItem1.Name = "ваходToolStripMenuItem1";
-            this.ваходToolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Z)));
-            this.ваходToolStripMenuItem1.Size = new System.Drawing.Size(194, 22);
-            this.ваходToolStripMenuItem1.Text = "Ваход";
-            this.ваходToolStripMenuItem1.Click += new System.EventHandler(this.ваходToolStripMenuItem1_Click_1);
+            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(0, 17);
+            this.toolStripStatusLabel1.Click += new System.EventHandler(this.toolStripStatusLabel1_Click);
+            // 
+            // toolStripStatusLabel2
+            // 
+            this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
+            this.toolStripStatusLabel2.Size = new System.Drawing.Size(461, 17);
+            this.toolStripStatusLabel2.Spring = true;
+            this.toolStripStatusLabel2.Text = "ВХОДЯЩИЕ";
+            this.toolStripStatusLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // Form1
             // 
@@ -578,7 +621,7 @@
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FTP-Агент 2.7";
+            this.Text = "FTP-Агент 2.8";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.Layout += new System.Windows.Forms.LayoutEventHandler(this.Form1_Layout);
@@ -587,12 +630,12 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            this.contextMenuStrip2.ResumeLayout(false);
             this.contextMenuStrip1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.contextMenuStrip2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -606,7 +649,6 @@
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TreeView treeView1;
@@ -639,8 +681,8 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.TreeView treeView2;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label lbl2;
+        private System.Windows.Forms.Label lbl1;
         private System.Windows.Forms.Button btnAdd1;
         private System.Windows.Forms.Button btnAdd2;
         private System.Windows.Forms.ColorDialog colorDialog1;
@@ -650,6 +692,11 @@
         private System.Windows.Forms.ToolStripMenuItem подключениеToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem ваходToolStripMenuItem1;
+        private System.Windows.Forms.RadioButton rbPath2;
+        private System.Windows.Forms.TextBox txtPath2;
+        private System.Windows.Forms.RadioButton rbPath1;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel2;
     }
 }
 

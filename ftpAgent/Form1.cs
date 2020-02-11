@@ -262,13 +262,29 @@ namespace ftpAgent
                 string folderData = timeWork.Split(' ')[0].Split('.')[2].Trim();
                 int nDate = int.Parse(timeWork.Split(' ')[0].Split('.')[1]);
                 string nowDate = timeWork.Split(' ')[0];
-                currentPath = String.Format("{0}{1}/{2}. {3}/{4}", txtPath.Text, folderData, nDate.ToString(), month[nDate], nowDate);
+                
+                if (rbPath1.Checked) // Проверка какой базовый путь выбран
+                {
+                    currentPath = String.Format("{0}{1}/{2}. {3}/{4}", txtPath.Text, folderData, nDate.ToString(), month[nDate], nowDate);
+                }
+                else
+                {
+                    currentPath = String.Format("{0}{1}/{2}. {3}/{4}", txtPath2.Text, folderData, nDate.ToString(), month[nDate], nowDate.Replace($".{folderData}", ""));
+                }
+               
+
                 client.ChangeDirectory(2000, currentPath);
 
 
                 //client.ChangeDirectory(2000, txtPath.Text); // Начальная папка при старте...
                 GetItemsFromFtp();
-
+                if (rbPath1.Checked) 
+                {
+                    toolStripStatusLabel2.Text = $" Текущая директория: (ВХОДЯЩИЕ)";
+                } else
+                {
+                    toolStripStatusLabel2.Text = $" Текущая директория: (ИСХОДЯЩИЕ)";
+                }
             }
             catch 
             {
@@ -319,7 +335,17 @@ namespace ftpAgent
                 string folderData = timeWork.Split(' ')[0].Split('.')[2].Trim();
                 int nDate = int.Parse(timeWork.Split(' ')[0].Split('.')[1]);
                 string nowDate = timeWork.Split(' ')[0];
-                currentPath2 = String.Format("{0}!ИСПОЛНЕНИЕ И РАСТОРЖЕНИЕ/{1}/{2}. {3}/", txtPath.Text, folderData, nDate.ToString(), month[nDate]);
+               
+
+                if (rbPath1.Checked)
+                {
+                    currentPath2 = String.Format("{0}!ИСПОЛНЕНИЕ И РАСТОРЖЕНИЕ/{1}/{2}. {3}/", txtPath.Text, folderData, nDate.ToString(), month[nDate]);
+                } else
+                {
+                    currentPath2 = String.Format("{0}!ИСПОЛНЕНИЕ И РАСТОРЖЕНИЕ/{2}. {3}/", txtPath2.Text, folderData, nDate.ToString(), month[nDate]);
+                }
+                
+                
                 client2.ChangeDirectory(2000, currentPath2);
 
 
@@ -442,6 +468,8 @@ namespace ftpAgent
             INIManager.Class1.INIManager manager = new Class1.INIManager(basePath + @"/my.ini");
 
             txtPath.Text = manager.GetPrivateString("main", "basePath");
+            txtPath2.Text = manager.GetPrivateString("main", "basePath2");
+
             txtServer.Text = manager.GetPrivateString("main", "server");
             txtPort.Text = manager.GetPrivateString("main", "port");
             txtLogin.Text = manager.GetPrivateString("main", "login");
@@ -510,6 +538,7 @@ namespace ftpAgent
             string basePath = Path.Combine(appPath);
             INIManager.Class1.INIManager manager = new Class1.INIManager(basePath + @"/my.ini");
             manager.WritePrivateString("main", "basePath", txtPath.Text.Trim());
+            manager.WritePrivateString("main", "basePath2", txtPath2.Text.Trim());
             manager.WritePrivateString("main", "server", txtServer.Text.Trim());
             manager.WritePrivateString("main", "port", txtPort.Text.Trim());
             manager.WritePrivateString("main", "login", txtLogin.Text.Trim());
@@ -739,6 +768,11 @@ namespace ftpAgent
         private void ваходToolStripMenuItem1_Click_1(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void toolStripStatusLabel1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
