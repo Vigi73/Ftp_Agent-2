@@ -293,6 +293,8 @@ namespace ftpAgent
                 client.Disconnect(1000);
             
             }
+
+            lblCount.Text = $"записей: {treeView1.Nodes.Count}";
             
             //client.Disconnect(TimeoutFTP);
         }
@@ -360,7 +362,7 @@ namespace ftpAgent
                 client2.Disconnect(1000);
 
             }
-
+            lblCount2.Text = $"записей: {treeView2.Nodes.Count}";
             //client.Disconnect(TimeoutFTP);
         }
 
@@ -374,6 +376,7 @@ namespace ftpAgent
                     client.ChangeDirectory(2000, treeView1.SelectedNode.Text);
                     treeView1.Nodes.Clear();
                     GetItemsFromFtp();
+                    lblCount.Text = $"записей: {treeView1.Nodes.Count}";
                 }
                 else
                 {
@@ -416,6 +419,7 @@ namespace ftpAgent
                     client2.ChangeDirectory(2000, treeView2.SelectedNode.Text);
                     treeView2.Nodes.Clear();
                     GetItemsFromFtp2();
+                    lblCount2.Text = $"записей: {treeView2.Nodes.Count}";
                 }
                 else
                 {
@@ -594,11 +598,14 @@ namespace ftpAgent
         private void button2_Click(object sender, EventArgs e)
         {
             back();
+            lblCount.Text = $"записей: {treeView1.Nodes.Count}";
+
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             back2();
+            lblCount2.Text = $"записей: {treeView2.Nodes.Count}";
         }
 
        

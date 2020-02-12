@@ -84,6 +84,8 @@
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
+            this.lblCount2 = new System.Windows.Forms.Label();
+            this.lblCount = new System.Windows.Forms.Label();
             this.statusStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -239,6 +241,8 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.tabPage1.Controls.Add(this.lblCount);
+            this.tabPage1.Controls.Add(this.lblCount2);
             this.tabPage1.Controls.Add(this.button4);
             this.tabPage1.Controls.Add(this.btnAddFile1);
             this.tabPage1.Controls.Add(this.btnAdd2);
@@ -285,7 +289,7 @@
             this.treeView2.Location = new System.Drawing.Point(299, 23);
             this.treeView2.Name = "treeView2";
             this.treeView2.SelectedImageIndex = 0;
-            this.treeView2.Size = new System.Drawing.Size(290, 469);
+            this.treeView2.Size = new System.Drawing.Size(290, 453);
             this.treeView2.TabIndex = 2;
             this.treeView2.DoubleClick += new System.EventHandler(this.treeView2_DoubleClick_1);
             // 
@@ -331,7 +335,7 @@
             this.treeView1.Location = new System.Drawing.Point(3, 23);
             this.treeView1.Name = "treeView1";
             this.treeView1.SelectedImageIndex = 0;
-            this.treeView1.Size = new System.Drawing.Size(294, 469);
+            this.treeView1.Size = new System.Drawing.Size(294, 453);
             this.treeView1.TabIndex = 0;
             this.treeView1.DoubleClick += new System.EventHandler(this.treeView1_DoubleClick);
             // 
@@ -610,6 +614,26 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // lblCount2
+            // 
+            this.lblCount2.AutoSize = true;
+            this.lblCount2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblCount2.Location = new System.Drawing.Point(298, 479);
+            this.lblCount2.Name = "lblCount2";
+            this.lblCount2.Size = new System.Drawing.Size(52, 13);
+            this.lblCount2.TabIndex = 12;
+            this.lblCount2.Text = "записей:";
+            // 
+            // lblCount
+            // 
+            this.lblCount.AutoSize = true;
+            this.lblCount.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblCount.Location = new System.Drawing.Point(3, 479);
+            this.lblCount.Name = "lblCount";
+            this.lblCount.Size = new System.Drawing.Size(52, 13);
+            this.lblCount.TabIndex = 13;
+            this.lblCount.Text = "записей:";
+            // 
             // Form1
             // 
             this.AllowDrop = true;
@@ -623,7 +647,7 @@
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FTP-Агент 2.8.1";
+            this.Text = "FTP-Агент 2.8.2";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.Layout += new System.Windows.Forms.LayoutEventHandler(this.Form1_Layout);
@@ -699,6 +723,8 @@
         private System.Windows.Forms.RadioButton rbPath1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel2;
+        private System.Windows.Forms.Label lblCount;
+        private System.Windows.Forms.Label lblCount2;
     }
 }
 
