@@ -45,6 +45,8 @@
             this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.lblCount = new System.Windows.Forms.Label();
+            this.lblCount2 = new System.Windows.Forms.Label();
             this.lbl2 = new System.Windows.Forms.Label();
             this.lbl1 = new System.Windows.Forms.Label();
             this.treeView2 = new System.Windows.Forms.TreeView();
@@ -84,8 +86,6 @@
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
-            this.lblCount2 = new System.Windows.Forms.Label();
-            this.lblCount = new System.Windows.Forms.Label();
             this.statusStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -141,14 +141,12 @@
             // 
             // button1
             // 
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button1.ImageIndex = 11;
             this.button1.ImageList = this.imageList1;
-            this.button1.Location = new System.Drawing.Point(222, 435);
+            this.button1.Location = new System.Drawing.Point(7, 436);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(141, 26);
+            this.button1.Size = new System.Drawing.Size(570, 26);
             this.button1.TabIndex = 19;
-            this.button1.Text = "Сохранить настройки:";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.toolTip1.SetToolTip(this.button1, "Сохранить настройки");
             this.button1.UseVisualStyleBackColor = true;
@@ -261,11 +259,30 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "FTP";
             // 
+            // lblCount
+            // 
+            this.lblCount.AutoSize = true;
+            this.lblCount.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblCount.Location = new System.Drawing.Point(3, 479);
+            this.lblCount.Name = "lblCount";
+            this.lblCount.Size = new System.Drawing.Size(52, 13);
+            this.lblCount.TabIndex = 13;
+            this.lblCount.Text = "записей:";
+            // 
+            // lblCount2
+            // 
+            this.lblCount2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblCount2.Location = new System.Drawing.Point(298, 479);
+            this.lblCount2.Name = "lblCount2";
+            this.lblCount2.Size = new System.Drawing.Size(52, 13);
+            this.lblCount2.TabIndex = 12;
+            this.lblCount2.Text = "записей:";
+            // 
             // lbl2
             // 
             this.lbl2.AutoSize = true;
             this.lbl2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbl2.Location = new System.Drawing.Point(353, 5);
+            this.lbl2.Location = new System.Drawing.Point(380, 5);
             this.lbl2.Name = "lbl2";
             this.lbl2.Size = new System.Drawing.Size(151, 13);
             this.lbl2.TabIndex = 5;
@@ -274,7 +291,7 @@
             // lbl1
             // 
             this.lbl1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbl1.Location = new System.Drawing.Point(55, 6);
+            this.lbl1.Location = new System.Drawing.Point(112, 5);
             this.lbl1.Name = "lbl1";
             this.lbl1.Size = new System.Drawing.Size(90, 13);
             this.lbl1.TabIndex = 4;
@@ -388,7 +405,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.AutoSize = true;
-            this.groupBox1.BackColor = System.Drawing.Color.Bisque;
+            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
             this.groupBox1.Controls.Add(this.rbPath2);
             this.groupBox1.Controls.Add(this.txtPath2);
             this.groupBox1.Controls.Add(this.rbPath1);
@@ -421,6 +438,7 @@
             // rbPath2
             // 
             this.rbPath2.AutoSize = true;
+            this.rbPath2.ForeColor = System.Drawing.SystemColors.Control;
             this.rbPath2.Location = new System.Drawing.Point(118, 48);
             this.rbPath2.Name = "rbPath2";
             this.rbPath2.Size = new System.Drawing.Size(98, 17);
@@ -441,6 +459,7 @@
             // 
             this.rbPath1.AutoSize = true;
             this.rbPath1.Checked = true;
+            this.rbPath1.ForeColor = System.Drawing.SystemColors.Control;
             this.rbPath1.Location = new System.Drawing.Point(118, 22);
             this.rbPath1.Name = "rbPath1";
             this.rbPath1.Size = new System.Drawing.Size(98, 17);
@@ -453,6 +472,7 @@
             // chTopMost
             // 
             this.chTopMost.AutoSize = true;
+            this.chTopMost.ForeColor = System.Drawing.SystemColors.Control;
             this.chTopMost.Location = new System.Drawing.Point(484, 268);
             this.chTopMost.Name = "chTopMost";
             this.chTopMost.Size = new System.Drawing.Size(93, 17);
@@ -464,6 +484,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
+            this.label8.ForeColor = System.Drawing.SystemColors.Control;
             this.label8.Location = new System.Drawing.Point(293, 354);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(87, 13);
@@ -480,7 +501,8 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(3, 290);
+            this.label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label7.Location = new System.Drawing.Point(4, 290);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(125, 13);
             this.label7.TabIndex = 15;
@@ -505,6 +527,7 @@
             // 
             // label6
             // 
+            this.label6.ForeColor = System.Drawing.SystemColors.Control;
             this.label6.Location = new System.Drawing.Point(206, 224);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(94, 16);
@@ -524,6 +547,7 @@
             // 
             this.chAll.Checked = true;
             this.chAll.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chAll.ForeColor = System.Drawing.SystemColors.Control;
             this.chAll.Location = new System.Drawing.Point(305, 203);
             this.chAll.Name = "chAll";
             this.chAll.Size = new System.Drawing.Size(105, 16);
@@ -533,15 +557,17 @@
             // 
             // label5
             // 
-            this.label5.Location = new System.Drawing.Point(254, 170);
+            this.label5.ForeColor = System.Drawing.SystemColors.Control;
+            this.label5.Location = new System.Drawing.Point(157, 167);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(46, 16);
+            this.label5.Size = new System.Drawing.Size(59, 16);
             this.label5.TabIndex = 9;
             this.label5.Text = "Пароль:";
             // 
             // label4
             // 
-            this.label4.Location = new System.Drawing.Point(255, 145);
+            this.label4.ForeColor = System.Drawing.SystemColors.Control;
+            this.label4.Location = new System.Drawing.Point(157, 142);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(45, 17);
             this.label4.TabIndex = 8;
@@ -550,24 +576,25 @@
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(305, 167);
+            this.txtPassword.Location = new System.Drawing.Point(222, 167);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(272, 20);
+            this.txtPassword.Size = new System.Drawing.Size(355, 20);
             this.txtPassword.TabIndex = 7;
             this.txtPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // txtLogin
             // 
-            this.txtLogin.Location = new System.Drawing.Point(305, 142);
+            this.txtLogin.Location = new System.Drawing.Point(222, 142);
             this.txtLogin.Name = "txtLogin";
-            this.txtLogin.Size = new System.Drawing.Size(272, 20);
+            this.txtLogin.Size = new System.Drawing.Size(355, 20);
             this.txtLogin.TabIndex = 6;
             this.txtLogin.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.SystemColors.Control;
             this.label3.Location = new System.Drawing.Point(422, 86);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(35, 13);
@@ -577,7 +604,8 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(4, 86);
+            this.label2.ForeColor = System.Drawing.SystemColors.Control;
+            this.label2.Location = new System.Drawing.Point(221, 86);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(69, 13);
             this.label2.TabIndex = 4;
@@ -592,9 +620,9 @@
             // 
             // txtServer
             // 
-            this.txtServer.Location = new System.Drawing.Point(6, 101);
+            this.txtServer.Location = new System.Drawing.Point(222, 101);
             this.txtServer.Name = "txtServer";
-            this.txtServer.Size = new System.Drawing.Size(404, 20);
+            this.txtServer.Size = new System.Drawing.Size(188, 20);
             this.txtServer.TabIndex = 2;
             // 
             // txtPath
@@ -614,26 +642,6 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // lblCount2
-            // 
-            this.lblCount2.AutoSize = true;
-            this.lblCount2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblCount2.Location = new System.Drawing.Point(298, 479);
-            this.lblCount2.Name = "lblCount2";
-            this.lblCount2.Size = new System.Drawing.Size(52, 13);
-            this.lblCount2.TabIndex = 12;
-            this.lblCount2.Text = "записей:";
-            // 
-            // lblCount
-            // 
-            this.lblCount.AutoSize = true;
-            this.lblCount.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblCount.Location = new System.Drawing.Point(3, 479);
-            this.lblCount.Name = "lblCount";
-            this.lblCount.Size = new System.Drawing.Size(52, 13);
-            this.lblCount.TabIndex = 13;
-            this.lblCount.Text = "записей:";
-            // 
             // Form1
             // 
             this.AllowDrop = true;
@@ -647,7 +655,7 @@
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FTP-Агент 2.8.2";
+            this.Text = "FTP-Агент 2.8.3";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.Layout += new System.Windows.Forms.LayoutEventHandler(this.Form1_Layout);
