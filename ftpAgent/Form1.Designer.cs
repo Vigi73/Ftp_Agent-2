@@ -98,7 +98,7 @@
             // btnAdd2
             // 
             this.btnAdd2.Image = global::ftpAgent.Properties.Resources._new;
-            this.btnAdd2.Location = new System.Drawing.Point(299, -1);
+            this.btnAdd2.Location = new System.Drawing.Point(295, -1);
             this.btnAdd2.Name = "btnAdd2";
             this.btnAdd2.Size = new System.Drawing.Size(25, 25);
             this.btnAdd2.TabIndex = 7;
@@ -109,7 +109,7 @@
             // btnAdd1
             // 
             this.btnAdd1.Image = global::ftpAgent.Properties.Resources._new;
-            this.btnAdd1.Location = new System.Drawing.Point(2, -1);
+            this.btnAdd1.Location = new System.Drawing.Point(1, -1);
             this.btnAdd1.Name = "btnAdd1";
             this.btnAdd1.Size = new System.Drawing.Size(25, 25);
             this.btnAdd1.TabIndex = 6;
@@ -131,7 +131,7 @@
             // button2
             // 
             this.button2.Image = global::ftpAgent.Properties.Resources.double_arrows__2_;
-            this.button2.Location = new System.Drawing.Point(273, -1);
+            this.button2.Location = new System.Drawing.Point(271, -1);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(25, 25);
             this.button2.TabIndex = 1;
@@ -172,7 +172,7 @@
             // btnAddFile1
             // 
             this.btnAddFile1.Image = global::ftpAgent.Properties.Resources.note;
-            this.btnAddFile1.Location = new System.Drawing.Point(24, -1);
+            this.btnAddFile1.Location = new System.Drawing.Point(23, -1);
             this.btnAddFile1.Name = "btnAddFile1";
             this.btnAddFile1.Size = new System.Drawing.Size(25, 25);
             this.btnAddFile1.TabIndex = 10;
@@ -183,7 +183,7 @@
             // button4
             // 
             this.button4.Image = global::ftpAgent.Properties.Resources.note;
-            this.button4.Location = new System.Drawing.Point(322, -1);
+            this.button4.Location = new System.Drawing.Point(318, -1);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(25, 25);
             this.button4.TabIndex = 11;
@@ -263,7 +263,7 @@
             // 
             this.lblCount.AutoSize = true;
             this.lblCount.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblCount.Location = new System.Drawing.Point(3, 479);
+            this.lblCount.Location = new System.Drawing.Point(0, 479);
             this.lblCount.Name = "lblCount";
             this.lblCount.Size = new System.Drawing.Size(52, 13);
             this.lblCount.TabIndex = 13;
@@ -271,8 +271,9 @@
             // 
             // lblCount2
             // 
+            this.lblCount2.AutoSize = true;
             this.lblCount2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblCount2.Location = new System.Drawing.Point(298, 479);
+            this.lblCount2.Location = new System.Drawing.Point(295, 479);
             this.lblCount2.Name = "lblCount2";
             this.lblCount2.Size = new System.Drawing.Size(52, 13);
             this.lblCount2.TabIndex = 12;
@@ -299,19 +300,22 @@
             // 
             // treeView2
             // 
-            this.treeView2.BackColor = System.Drawing.Color.FloralWhite;
+            this.treeView2.BackColor = System.Drawing.Color.OldLace;
             this.treeView2.ContextMenuStrip = this.contextMenuStrip2;
+            this.treeView2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.treeView2.FullRowSelect = true;
             this.treeView2.ImageIndex = 0;
             this.treeView2.ImageList = this.imageList1;
-            this.treeView2.Location = new System.Drawing.Point(299, 23);
+            this.treeView2.Location = new System.Drawing.Point(296, 23);
             this.treeView2.Name = "treeView2";
             this.treeView2.SelectedImageIndex = 0;
-            this.treeView2.Size = new System.Drawing.Size(290, 453);
+            this.treeView2.Size = new System.Drawing.Size(293, 453);
             this.treeView2.TabIndex = 2;
             this.treeView2.DoubleClick += new System.EventHandler(this.treeView2_DoubleClick_1);
             // 
             // contextMenuStrip2
             // 
+            this.contextMenuStrip2.BackColor = System.Drawing.Color.PapayaWhip;
             this.contextMenuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.подключениеToolStripMenuItem,
             this.toolStripMenuItem1,
@@ -344,20 +348,23 @@
             // 
             // treeView1
             // 
-            this.treeView1.BackColor = System.Drawing.Color.FloralWhite;
+            this.treeView1.BackColor = System.Drawing.Color.OldLace;
             this.treeView1.ContextMenuStrip = this.contextMenuStrip1;
+            this.treeView1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.treeView1.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.treeView1.FullRowSelect = true;
             this.treeView1.ImageIndex = 0;
             this.treeView1.ImageList = this.imageList1;
-            this.treeView1.Location = new System.Drawing.Point(3, 23);
+            this.treeView1.Location = new System.Drawing.Point(2, 23);
             this.treeView1.Name = "treeView1";
             this.treeView1.SelectedImageIndex = 0;
-            this.treeView1.Size = new System.Drawing.Size(294, 453);
+            this.treeView1.Size = new System.Drawing.Size(293, 453);
             this.treeView1.TabIndex = 0;
             this.treeView1.DoubleClick += new System.EventHandler(this.treeView1_DoubleClick);
             // 
             // contextMenuStrip1
             // 
+            this.contextMenuStrip1.BackColor = System.Drawing.Color.PapayaWhip;
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.connectToolStripMenuItem,
             this.toolStripMenuItem2,
@@ -428,6 +435,7 @@
             this.groupBox1.Controls.Add(this.txtPort);
             this.groupBox1.Controls.Add(this.txtServer);
             this.groupBox1.Controls.Add(this.txtPath);
+            this.groupBox1.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.groupBox1.Location = new System.Drawing.Point(3, 3);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(586, 488);
@@ -510,6 +518,9 @@
             // 
             // btnSelectFoler
             // 
+            this.btnSelectFoler.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnSelectFoler.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSelectFoler.ForeColor = System.Drawing.Color.Black;
             this.btnSelectFoler.Location = new System.Drawing.Point(530, 304);
             this.btnSelectFoler.Name = "btnSelectFoler";
             this.btnSelectFoler.Size = new System.Drawing.Size(47, 22);
